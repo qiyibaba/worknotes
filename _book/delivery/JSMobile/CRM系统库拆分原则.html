@@ -1,0 +1,761 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CRM系统库拆分原则 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="测试环境和生产环境信息.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../OceanBase/">
+            
+                <a href="../../OceanBase/">
+            
+                    
+                    oceanbase
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../OceanBase/design/">
+            
+                <a href="../../OceanBase/design/">
+            
+                    
+                    系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../OceanBase/design/encode.html">
+            
+                <a href="../../OceanBase/design/encode.html">
+            
+                    
+                    OceanBase支持的编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../OceanBase/design/架构设计理念.html">
+            
+                <a href="../../OceanBase/design/架构设计理念.html">
+            
+                    
+                    架构设计理念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../OceanBase/loadbalance/">
+            
+                <a href="../../OceanBase/loadbalance/">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../OceanBase/loadbalance/ob_dns.html">
+            
+                <a href="../../OceanBase/loadbalance/ob_dns.html">
+            
+                    
+                    OB_DNS负载均衡使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../OceanBase/sql/">
+            
+                <a href="../../OceanBase/sql/">
+            
+                    
+                    SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../OceanBase/sql/index_type.html">
+            
+                <a href="../../OceanBase/sql/index_type.html">
+            
+                    
+                    表字典信息中index_type取值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../OceanBase/sql/outline.html">
+            
+                <a href="../../OceanBase/sql/outline.html">
+            
+                    
+                    绑定outline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../SUMMARY.html">
+            
+                <a href="../../SUMMARY.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    项目交付
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    江苏移动
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1.1" data-path="CRM系统库拆分原则.html">
+            
+                <a href="CRM系统库拆分原则.html">
+            
+                    
+                    CRM系统库拆分原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="测试环境和生产环境信息.html">
+            
+                <a href="测试环境和生产环境信息.html">
+            
+                    
+                    密码总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../linux/">
+            
+                <a href="../../linux/">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../linux/c++build.html">
+            
+                <a href="../../linux/c++build.html">
+            
+                    
+                    c++编译执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../linux/clock.html">
+            
+                <a href="../../linux/clock.html">
+            
+                    
+                    配置时钟源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../linux/disk.html">
+            
+                <a href="../../linux/disk.html">
+            
+                    
+                    磁盘分区划分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../linux/hostname.html">
+            
+                <a href="../../linux/hostname.html">
+            
+                    
+                    配置主机信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../linux/login.html">
+            
+                <a href="../../linux/login.html">
+            
+                    
+                    开通 root远程登录访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../linux/numa.html">
+            
+                <a href="../../linux/numa.html">
+            
+                    
+                    numa使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../linux/package.html">
+            
+                <a href="../../linux/package.html">
+            
+                    
+                    拆包和合包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../linux/rmfile.html">
+            
+                <a href="../../linux/rmfile.html">
+            
+                    
+                    删除10天前的文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../linux/ssh.html">
+            
+                <a href="../../linux/ssh.html">
+            
+                    
+                    互信配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../linux/ssh_login.html">
+            
+                <a href="../../linux/ssh_login.html">
+            
+                    
+                    远程SSH一键登录脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../linux/strace.html">
+            
+                <a href="../../linux/strace.html">
+            
+                    
+                    命令行执行卡住分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../linux/sudo.html">
+            
+                <a href="../../linux/sudo.html">
+            
+                    
+                    配置admin用户sudo免密登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../mac/">
+            
+                <a href="../../mac/">
+            
+                    
+                    mac
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../mac/markdown内进行绘图.html">
+            
+                <a href="../../mac/markdown内进行绘图.html">
+            
+                    
+                    MarkDown画图(实例讲解) —— 流程图、序列图、饼图、甘特图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../mac/tool_usage.html">
+            
+                <a href="../../mac/tool_usage.html">
+            
+                    
+                    mac工具使用手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >CRM系统库拆分原则</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="crm&#x7CFB;&#x7EDF;&#x5E93;&#x62C6;&#x5206;&#x539F;&#x5219;">CRM&#x7CFB;&#x7EDF;&#x5E93;&#x62C6;&#x5206;&#x539F;&#x5219;</h1>
+<p>&#x200B;                                                                                                                                                                                   by &#x5B81;&#x6A3E;</p>
+<h2 id="&#x57FA;&#x7840;&#x6982;&#x5FF5;">&#x57FA;&#x7840;&#x6982;&#x5FF5;</h2>
+<p>OceanBase &#x6570;&#x636E;&#x5E93;&#x901A;&#x8FC7; OceanBase &#x96C6;&#x7FA4;&#x6765;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;&#x4E00;&#x4E2A; OceanBase &#x96C6;&#x7FA4;&#x7531;&#x591A;&#x4E2A; OBServer &#x8282;&#x70B9;&#x7EC4;&#x6210;&#xFF0C;&#x6BCF;&#x4E2A; OBServer &#x8282;&#x70B9;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A; Zone&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5404;&#x4E2A; Zone &#x5185;&#x7684;&#x673A;&#x5668;&#x914D;&#x7F6E;&#x4E0E;&#x6570;&#x91CF;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x591A;&#x53F0; OBServer &#x4F5C;&#x4E3A;&#x8D44;&#x6E90;&#x7EC4;&#x6210;&#x5404;&#x4E2A;&#x4E1A;&#x52A1;&#x6240;&#x9700;&#x7684;&#x8D44;&#x6E90;&#x6C60;&#x3002;&#x7BA1;&#x7406;&#x5458;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x60C5;&#x51B5;&#xFF0C;&#x5C06;&#x8D44;&#x6E90;&#x518D;&#x5212;&#x5206;&#x6210;&#x4E0D;&#x540C;&#x5927;&#x5C0F;&#x7684;&#x8D44;&#x6E90;&#x6C60;&#x5206;&#x914D;&#x7ED9;&#x79DF;&#x6237;&#x4F7F;&#x7528;&#xFF0C;&#x4E00;&#x822C;&#x5EFA;&#x8BAE;&#x9AD8;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x7684;&#x4E1A;&#x52A1;&#x5206;&#x914D;&#x5927;&#x8D44;&#x6E90;&#x6C60;&#xFF0C;&#x4F4E;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x7684;&#x4E1A;&#x52A1;&#x5206;&#x914D;&#x5C0F;&#x8D44;&#x6E90;&#x6C60;&#x3002;</p>
+<p>OceanBase &#x6570;&#x636E;&#x5E93;&#x57FA;&#x7840;&#x6982;&#x5FF5;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://c2.im5i.com/2022/10/11/TSZ4s.jpg" alt="TSZ4s.jpg"> </p>
+<h2 id="&#x6574;&#x4F53;&#x67B6;&#x6784;">&#x6574;&#x4F53;&#x67B6;&#x6784;</h2>
+<pre><code class="lang-mermaid">graph TB
+subgraph &#x96C6;&#x7FA4;
+CRMDB1
+end
+subgraph &#x79DF;&#x6237;
+CRMDB1 --&gt; &#x626C;&#x5DDE;
+CRMDB1 --&gt; &#x5FAE;&#x5E93;1
+CRMDB1 --&gt; &#x5FAE;&#x5E93;2
+CRMDB1 --&gt; &#x5FAE;&#x5E93;3
+CRMDB1 --&gt; &#x5FAE;&#x5E93;4
+CRMDB1 --&gt; &#x5FAE;&#x5E93;5
+CRMDB1 --&gt; &#x5176;&#x4ED6;
+end
+subgraph schema
+&#x5FAE;&#x5E93;1 --&gt; F[&#x53D1;&#x7968;]
+&#x5FAE;&#x5E93;2 --&gt; M[&#x514D;&#x586B;&#x5355;]
+&#x5FAE;&#x5E93;3 --&gt; D[&#x77ED;&#x4FE1;]
+&#x5FAE;&#x5E93;4 --&gt; C[&#x5145;&#x503C;]
+&#x5FAE;&#x5E93;5 --&gt; K[&#x670D;&#x5F00;]
+&#x5176;&#x4ED6; --&gt; S[&#x8BA2;&#x5355;]
+&#x5176;&#x4ED6; --&gt; O[&#x8BA2;&#x8D2D;]
+&#x5176;&#x4ED6; --&gt; G[&#x8425;&#x6536;]
+&#x626C;&#x5DDE; --&gt; ALL[&#x53D1;&#x7968;,&#x514D;&#x586B;&#x5355;,&#x77ED;&#x4FE1;,&#x5145;&#x503C;,&#x670D;&#x5F00;,&#x8BA2;&#x5355;,&#x8BA2;&#x8D2D;,&#x8425;&#x6536;]
+end
+</code></pre>
+<ul>
+<li><p>CRMDB1&#x5E93;&#x5171;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x96C6;&#x7FA4;</p>
+</li>
+<li><p>&#x96C6;&#x7FA4;&#x5185;&#x62C6;&#x5206;7&#x4E2A;&#x79DF;&#x6237;</p>
+<ul>
+<li><p>&#x4E00;&#x5957;1-1-1&#x67B6;&#x6784;&#x7684;&#x79DF;&#x6237;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x626C;&#x5DDE;&#x5E93;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;</p>
+</li>
+<li><p>5&#x4E2A;&#x5C0F;&#x79DF;&#x6237;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x62C6;&#x5206;&#x7684;5&#x4E2A;&#x5FAE;&#x5E93;&#x5957;&#x4EF6;&#x6570;&#x636E;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5957;&#x4EF6;&#x5185;&#x5305;&#x542B;&#x5357;&#x901A;&#xFF0C;&#x6CF0;&#x5DDE;&#xFF0C;&#x76D0;&#x57CE;&#x4E09;&#x5730;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6BCF;2&#x4E2A;&#x5C0F;&#x79DF;&#x6237;&#x5171;&#x7528;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;</p>
+</li>
+<li><p>&#x4E00;&#x5957;2-2-2&#x7684;&#x5927;&#x79DF;&#x6237;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x5176;&#x4ED6;&#x7684;&#x4E09;&#x4E2A;&#x5957;&#x4EF6;&#xFF08;&#x8BA2;&#x5355;&#xFF0C;&#x8BA2;&#x8D2D;&#xFF0C;&#x8425;&#x6536;&#xFF09;&#xFF0C;&#x4F7F;&#x7528;&#x5206;&#x533A;&#x8FC1;&#x79FB;&#x6280;&#x672F;&#x5C06;&#x4E0D;&#x540C;&#x7684;schema&#x8FC1;&#x79FB;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x5206;&#x5E03;&#x793A;&#x610F;&#x56FE;">&#x5206;&#x5E03;&#x793A;&#x610F;&#x56FE;</h2>
+<p><img src="https://c2.im5i.com/2022/10/11/TSI9m.png" alt="TSI9m.png"></p>
+<ul>
+<li><p>&#x5171;&#x4F7F;&#x7528;2&#x79CD;&#x6280;&#x672F;&#x8FDB;&#x884C;&#x4E86;&#x8868;&#x7684;&#x805A;&#x5408;</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x5C0F;&#x79DF;&#x6237;&#x8FDB;&#x884C;&#x805A;&#x5408;<ul>
+<li>&#x5C0F;&#x79DF;&#x6237;&#x805A;&#x5408;&#x7684;&#x597D;&#x5904;&#x662F;&#x8FD0;&#x7EF4;&#x96BE;&#x5EA6;&#x4F4E;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5C0F;&#x79DF;&#x6237;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8868;&#x7684;&#x5206;&#x5E03;&#x90FD;&#x5728;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x8003;&#x8651;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</li>
+<li>&#x5E26;&#x6765;&#x7684;&#x4EE3;&#x4EF7;&#x662F;&#x5982;&#x679C;&#x8DE8;&#x79DF;&#x6237;&#x7684;&#x4E8B;&#x52A1;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;&#x6216;&#x8005;&#x4F7F;&#x7528;dblink</li>
+</ul>
+</li>
+<li>&#x4F7F;&#x7528;schema&#x8FDB;&#x884C;&#x624B;&#x5DE5;&#x805A;&#x5408;<ul>
+<li>&#x5929;&#x7136;&#x652F;&#x6301;&#x8DE8;schema&#x7684;&#x4E8B;&#x52A1;</li>
+<li>&#x8FD0;&#x7EF4;&#x96BE;&#x5EA6;&#x9AD8;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x6BCF;&#x4E2A;&#x5206;&#x533A;&#x90FD;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x5206;&#x5E03;&#x5224;&#x65AD;&#xFF0C;&#x5F53;&#x8FDB;&#x884C;&#x4E86;&#x7C7B;&#x4F3C;truncate&#xFF0C;&#x91CD;&#x5EFA;&#x8868;&#x7B49;&#x64CD;&#x4F5C;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x518D;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x5206;&#x533A;&#x8FC1;&#x79FB;</li>
+<li>&#x6269;&#x5BB9;&#x540E;&#xFF0C;&#x4ECD;&#x7136;&#x5B58;&#x5728;&#x5206;&#x5E03;&#x5F0F;&#x4E8B;&#x52A1;&#x7684;&#x53EF;&#x80FD;&#x6027;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x7EC6;&#x529B;&#x5EA6;&#x7684;&#x8868;&#x7684;&#x5206;&#x5E03;&#x5224;&#x65AD;&#xFF0C;&#x6574;&#x4F53;&#x96BE;&#x5EA6;&#x5F88;&#x5927;</li>
+<li>&#x5FC5;&#x987B;&#x5173;&#x95ED;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x70ED;&#x70B9;&#x95EE;&#x9898;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x6269;&#x5BB9;&#x5E26;&#x6765;&#x7684;&#x5206;&#x5E03;&#x95EE;&#x9898;&#x548C;tablegroup">&#x6269;&#x5BB9;&#x5E26;&#x6765;&#x7684;&#x5206;&#x5E03;&#x95EE;&#x9898;&#x548C;TableGroup</h2>
+<ul>
+<li><p>&#x5F53;&#x672A;&#x6765;&#x6574;&#x4E2A;&#x6C5F;&#x82CF;&#x5730;&#x5E02;&#x5168;&#x90E8;&#x8FC1;&#x79FB;&#x81F3;&#x96C6;&#x7FA4;&#x7684;&#x65F6;&#x5019;&#x7684;&#x6269;&#x5BB9;&#xFF1A;</p>
+<ul>
+<li>&#x5FAE;&#x5E93;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E00;&#x53F0;Server</li>
+<li>&#x4F46;&#x662F;&#x8BA2;&#x5355;&#xFF0C;&#x8BA2;&#x8D2D;&#xFF0C;&#x8425;&#x6536;&#x5E93;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x66F4;&#x591A;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x8BE5;&#x79DF;&#x6237;&#x6269;&#x5C55;&#x5230;4&#x53F0;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x8FC1;&#x79FB;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x624B;&#x5DE5;&#x8FDB;&#x884C;&#x8868;&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x6574;&#x4F53;&#x96BE;&#x5EA6;&#x975E;&#x5E38;&#x9AD8;</li>
+<li><img src="https://c2.im5i.com/2022/10/11/TSo1t.png" alt="TSo1t.png"></li>
+</ul>
+</li>
+<li><p>OceanBase&#x672C;&#x8EAB;&#x8FD8;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;tablegroup&#x7684;&#x805A;&#x5408;&#x80FD;&#x529B;&#xFF1A;</p>
+<ul>
+<li>&#x57FA;&#x4E8E;tablegroup&#x7684;&#x805A;&#x5408;&#x5E26;&#x6765;&#x4E86;&#x4E1A;&#x52A1;&#x7684;&#x6311;&#x6218;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x4E1A;&#x52A1;&#x8868;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x6240;&#x6709;&#x9700;&#x8981;&#x805A;&#x5408;&#x7684;&#x8868;&#x7684;&#x5206;&#x533A;&#x8BBE;&#x7F6E;&#x6210;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;OceanBase&#x4F1A;&#x5C06;&#x6BCF;&#x5F20;&#x8868;&#x7684;&#x540C;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#x5206;&#x533A;&#x5206;&#x914D;&#x5230;&#x540C;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;<ul>
+<li>&#x8FD9;&#x79CD;&#x805A;&#x5408;&#x5E26;&#x6765;&#x7684;&#x597D;&#x5904;&#x5C31;&#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x53D7;&#x6269;&#x5BB9;&#x7684;&#x5F71;&#x54CD;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x5F53;&#x670D;&#x52A1;&#x5668;&#x6269;&#x5BB9;&#x4E4B;&#x540E;&#xFF0C;OceanBase&#x7684;&#x81EA;&#x52A8;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x80FD;&#x529B;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x6240;&#x6709;&#x7684;&#x5206;&#x533A;&#x6309;&#x7167;&#x89C4;&#x5219;&#x6253;&#x6563;&#x5230;&#x6240;&#x6709;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4EBA;&#x5DE5;&#x8FDB;&#x884C;&#x5E72;&#x9884;&#xFF0C;&#x8FD0;&#x7EF4;&#x96BE;&#x5EA6;&#x6781;&#x5927;&#x964D;&#x4F4E;<ul>
+<li>&#x57FA;&#x4E8E;tablegroup&#x7684;&#x81EA;&#x52A8;&#x8D1F;&#x8F7D;&#xFF0C;&#x4E5F;&#x80FD;&#x6781;&#x5927;&#x7684;&#x907F;&#x514D;&#x70ED;&#x70B9;&#x95EE;&#x9898;&#x7684;&#x5B58;&#x5728;</li>
+</ul>
+</li>
+<li>&#x7531;&#x4E8E;&#x5355;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6570;&#x636E;&#x91CF;&#x7684;&#x51CF;&#x5C11;&#xFF0C;&#x540C;&#x4E8B;&#x6574;&#x4F53;&#x8D1F;&#x8F7D;&#x88AB;&#x66F4;&#x5C0F;&#x529B;&#x5EA6;&#x7684;&#x6253;&#x6563;&#x5230;&#x66F4;&#x591A;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x4E5F;&#x80FD;&#x5E26;&#x6765;&#x6269;&#x5BB9;&#x540E;&#x7684;&#x6027;&#x80FD;&#x7684;&#x4E0D;&#x4E0B;&#x964D;&#xFF0C;&#x4EE5;&#x53CA;&#x6574;&#x4F53;&#x541E;&#x5410;&#x91CF;&#x7684;&#x589E;&#x52A0;</li>
+<li>&#x793A;&#x610F;&#x56FE;&#x5982;&#x4E0B;&#xFF1A; <img src="https://c2.im5i.com/2022/10/11/TS3rq.png" alt="TS3rq.png"></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 江苏移动">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="测试环境和生产环境信息.html" class="navigation navigation-next " aria-label="Next page: 密码总结">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CRM系统库拆分原则","level":"1.4.1.1","depth":3,"next":{"title":"密码总结","level":"1.4.1.2","depth":3,"path":"delivery/JSMobile/测试环境和生产环境信息.md","ref":"delivery/JSMobile/测试环境和生产环境信息.md","articles":[]},"previous":{"title":"江苏移动","level":"1.4.1","depth":2,"path":"delivery/JSMobile/README.md","ref":"delivery/JSMobile/README.md","articles":[{"title":"CRM系统库拆分原则","level":"1.4.1.1","depth":3,"path":"delivery/JSMobile/CRM系统库拆分原则.md","ref":"delivery/JSMobile/CRM系统库拆分原则.md","articles":[]},{"title":"密码总结","level":"1.4.1.2","depth":3,"path":"delivery/JSMobile/测试环境和生产环境信息.md","ref":"delivery/JSMobile/测试环境和生产环境信息.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"delivery/JSMobile/CRM系统库拆分原则.md","mtime":"2022-10-11T06:09:27.788Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-11T06:10:39.584Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

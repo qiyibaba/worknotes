@@ -1,0 +1,934 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MarkDown画图(实例讲解) —— 流程图、序列图、饼图、甘特图 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tool_usage.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../OceanBase/">
+            
+                <a href="../OceanBase/">
+            
+                    
+                    oceanbase
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../OceanBase/design/">
+            
+                <a href="../OceanBase/design/">
+            
+                    
+                    系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../OceanBase/design/encode.html">
+            
+                <a href="../OceanBase/design/encode.html">
+            
+                    
+                    OceanBase支持的编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../OceanBase/design/架构设计理念.html">
+            
+                <a href="../OceanBase/design/架构设计理念.html">
+            
+                    
+                    架构设计理念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../OceanBase/loadbalance/">
+            
+                <a href="../OceanBase/loadbalance/">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../OceanBase/loadbalance/ob_dns.html">
+            
+                <a href="../OceanBase/loadbalance/ob_dns.html">
+            
+                    
+                    OB_DNS负载均衡使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../OceanBase/sql/">
+            
+                <a href="../OceanBase/sql/">
+            
+                    
+                    SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../OceanBase/sql/index_type.html">
+            
+                <a href="../OceanBase/sql/index_type.html">
+            
+                    
+                    表字典信息中index_type取值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../OceanBase/sql/outline.html">
+            
+                <a href="../OceanBase/sql/outline.html">
+            
+                    
+                    绑定outline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../delivery/">
+            
+                <a href="../delivery/">
+            
+                    
+                    项目交付
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../delivery/JSMobile/">
+            
+                <a href="../delivery/JSMobile/">
+            
+                    
+                    江苏移动
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../delivery/JSMobile/CRM系统库拆分原则.html">
+            
+                <a href="../delivery/JSMobile/CRM系统库拆分原则.html">
+            
+                    
+                    CRM系统库拆分原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../delivery/JSMobile/测试环境和生产环境信息.html">
+            
+                <a href="../delivery/JSMobile/测试环境和生产环境信息.html">
+            
+                    
+                    密码总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux/c++build.html">
+            
+                <a href="../linux/c++build.html">
+            
+                    
+                    c++编译执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux/clock.html">
+            
+                <a href="../linux/clock.html">
+            
+                    
+                    配置时钟源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../linux/disk.html">
+            
+                <a href="../linux/disk.html">
+            
+                    
+                    磁盘分区划分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../linux/hostname.html">
+            
+                <a href="../linux/hostname.html">
+            
+                    
+                    配置主机信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../linux/login.html">
+            
+                <a href="../linux/login.html">
+            
+                    
+                    开通 root远程登录访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../linux/numa.html">
+            
+                <a href="../linux/numa.html">
+            
+                    
+                    numa使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../linux/package.html">
+            
+                <a href="../linux/package.html">
+            
+                    
+                    拆包和合包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../linux/rmfile.html">
+            
+                <a href="../linux/rmfile.html">
+            
+                    
+                    删除10天前的文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../linux/ssh.html">
+            
+                <a href="../linux/ssh.html">
+            
+                    
+                    互信配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../linux/ssh_login.html">
+            
+                <a href="../linux/ssh_login.html">
+            
+                    
+                    远程SSH一键登录脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../linux/strace.html">
+            
+                <a href="../linux/strace.html">
+            
+                    
+                    命令行执行卡住分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../linux/sudo.html">
+            
+                <a href="../linux/sudo.html">
+            
+                    
+                    配置admin用户sudo免密登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    mac
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="markdown内进行绘图.html">
+            
+                <a href="markdown内进行绘图.html">
+            
+                    
+                    MarkDown画图(实例讲解) —— 流程图、序列图、饼图、甘特图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="tool_usage.html">
+            
+                <a href="tool_usage.html">
+            
+                    
+                    mac工具使用手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MarkDown画图(实例讲解) —— 流程图、序列图、饼图、甘特图</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="markdown&#x753B;&#x56FE;&#x5B9E;&#x4F8B;&#x8BB2;&#x89E3;-&#x2014;&#x2014;-&#x6D41;&#x7A0B;&#x56FE;&#x3001;&#x5E8F;&#x5217;&#x56FE;&#x3001;&#x997C;&#x56FE;&#x3001;&#x7518;&#x7279;&#x56FE;">MarkDown&#x753B;&#x56FE;(&#x5B9E;&#x4F8B;&#x8BB2;&#x89E3;) &#x2014;&#x2014; &#x6D41;&#x7A0B;&#x56FE;&#x3001;&#x5E8F;&#x5217;&#x56FE;&#x3001;&#x997C;&#x56FE;&#x3001;&#x7518;&#x7279;&#x56FE;</h1>
+<p>&#x5199;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x76EE;&#x7684;&#x4E3B;&#x8981;&#x662F;<strong>&#x5B66;&#x4E60;markdown&#x753B;&#x56FE;</strong>&#x3002;&#x76EE;&#x524D;&#x652F;&#x6301;&#x753B;&#x56FE;&#x7684;MarkDown&#x5DE5;&#x5177;&#x53EA;&#x6709;<strong>Typora&#x548C;&#x6709;&#x9053;&#x4E91;&#x7B14;&#x8BB0;</strong></p>
+<p><strong>ProcessOn VS MarkDown&#x3002;</strong>&#x867D;&#x7136;ProcessOn&#x4E5F;&#x80FD;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x6B21;&#x4F7F;&#x7528;&#x90FD;&#x8981;&#x4EE5;&#x56FE;&#x7247;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x7F16;&#x8F91;&#xFF0C;&#x4E0D;&#x4FBF;&#x4E8E;&#x5FAE;&#x8C03;&#x3002;&#x5728;&#x4E0D;&#x540C;&#x5E94;&#x7528;&#x4E4B;&#x95F4;&#x524D;&#x5207;&#x6362;&#x4E5F;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;</p>
+<p><strong>&#x6211;&#x7684;&#x5B66;&#x4E60;&#x65B9;&#x6CD5;</strong>&#x3002;&#x6211;&#x4F1A;&#x60F3;&#x51FA;&#x4E00;&#x4E2A;&#x7EFC;&#x5408;&#x6027;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x6240;&#x6709;&#x7684;&#x77E5;&#x8BC6;&#x70B9;&#x878D;&#x5165;&#x5230;&#x4E00;&#x5F20;&#x56FE;&#x91CC;&#x53BB;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x56DE;&#x5FC6;&#x7684;&#x65F6;&#x5019;&#x53EA;&#x7528;&#x56DE;&#x5FC6;&#x4E00;&#x5F20;&#x56FE;&#x5C31;&#x591F;&#x4E86;&#xFF0C;&#x63D0;&#x9AD8;&#x56DE;&#x5FC6;&#x6548;&#x7387;&#x3002;</p>
+<p><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fmermaid-js.github.io%2Fmermaid%2F%23%2F" target="_blank">&#x8BED;&#x6CD5;&#x53C2;&#x89C1;&#x5B98;&#x7F51;</a></p>
+<p><strong>&#x6587;&#x7AE0;&#x76EE;&#x5F55;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
+<ul>
+<li>&#x6D41;&#x7A0B;&#x56FE;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
+<li>&#x4EE3;&#x7801;&#x8BF4;&#x660E;&#xFF1A;</li>
+<li>typora&#x4E2D;&#x6548;&#x679C;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</li>
+<li>&#x5E8F;&#x5217;&#x56FE;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
+<li>&#x4EE3;&#x7801;&#x8BF4;&#x660E;:</li>
+<li>typora&#x4E2D;&#x6548;&#x679C;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</li>
+<li>&#x997C;&#x56FE;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
+<li>typora&#x4E2D;&#x6548;&#x679C;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</li>
+<li>&#x7518;&#x7279;&#x56FE;&#x4EE3;&#x7801;&#x8BF4;&#x660E;:</li>
+<li>&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
+<li>typora&#x4E2D;&#x5C55;&#x793A;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<h2 id="&#x6D41;&#x7A0B;&#x56FE;">&#x6D41;&#x7A0B;&#x56FE;</h2>
+<h4 id="&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;">&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</h4>
+<pre><code class="lang-mermaid">graph TB;
+subgraph &#x5206;&#x60C5;&#x51B5;
+A(&#x5F00;&#x59CB;)--&gt;B{&#x5224;&#x65AD;}
+end
+B--&#x7B2C;&#x4E00;&#x79CD;&#x60C5;&#x51B5;--&gt;C[&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6848;]
+B--&#x7B2C;&#x4E8C;&#x79CD;&#x60C5;&#x51B5;--&gt;D[&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6848;]
+B--&#x7B2C;&#x4E09;&#x79CD;&#x60C5;&#x51B5;--&gt;F{&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x6848;}
+subgraph &#x5206;&#x79CD;&#x7C7B;
+F-.&#x7B2C;1&#x4E2A;.-&gt;J((&#x6D4B;&#x8BD5;&#x5706;&#x5F62;))
+F-.&#x7B2C;2&#x4E2A;.-&gt;H&gt;&#x53F3;&#x5411;&#x65D7;&#x5E1C;&#x5F62;]
+end
+H---I(&#x6D4B;&#x8BD5;&#x5B8C;&#x6BD5;)
+C--&#x7968;&#x6570;100---I(&#x6D4B;&#x8BD5;&#x5B8C;&#x6BD5;)
+D---I(&#x6D4B;&#x8BD5;&#x5B8C;&#x6BD5;)
+J---I(&#x6D4B;&#x8BD5;&#x5B8C;&#x6BD5;)
+</code></pre>
+<h4 id="&#x4EE3;&#x7801;&#x8BF4;&#x660E;&#xFF1A;">&#x4EE3;&#x7801;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BCD;&#x8868;&#x793A;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TB</td>
+<td>&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;</td>
+</tr>
+<tr>
+<td>BT</td>
+<td>&#x4ECE;&#x4E0B;&#x5230;&#x4E0A;</td>
+</tr>
+<tr>
+<td>LR</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>RL</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x8868;&#x8FF0;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id[&#x6587;&#x5B57;]</td>
+<td>&#x77E9;&#x5F62;&#x8282;&#x70B9;</td>
+<td>&#x8868;&#x793A;&#x8FC7;&#x7A0B;</td>
+</tr>
+<tr>
+<td>id(&#x6587;&#x5B57;)</td>
+<td>&#x5706;&#x89D2;&#x77E9;&#x5F62;&#x8282;&#x70B9;</td>
+<td>&#x8868;&#x793A;&#x5F00;&#x59CB;&#x4E0E;&#x7ED3;&#x675F;</td>
+</tr>
+<tr>
+<td>id((&#x6587;&#x5B57;))</td>
+<td>&#x5706;&#x5F62;&#x8282;&#x70B9;</td>
+<td>&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x6D41;&#x7A0B;&#x8FC7;&#x957F;&#x6216;&#x6709;&#x4EA4;&#x53C9;&#xFF0C;&#x53EF;&#x5C06;&#x6D41;&#x7A0B;&#x5207;&#x5F00;&#x6210;&#x5BF9;</td>
+</tr>
+<tr>
+<td>id{&#x6587;&#x5B57;}</td>
+<td>&#x83F1;&#x5F62;&#x8282;&#x70B9;</td>
+<td>&#x8868;&#x793A;&#x5224;&#x65AD;&#x3001;&#x51B3;&#x7B56;</td>
+</tr>
+<tr>
+<td>id&gt;&#x6587;&#x5B57; ]</td>
+<td>&#x53F3;&#x5411;&#x65D7;&#x5E1C;&#x8282;&#x70B9;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<ol>
+<li>T&#x3001;B&#x3001;L&#x3001;T&#x5206;&#x522B;&#x662F;Top/Bottom/Left/Right&#x7684;&#x7F29;&#x5199;</li>
+<li>id&#x4E3A;&#x8282;&#x70B9;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x53D8;&#x91CF;&#x3002;&#x62EC;&#x53F7;&#x5185;&#x4E3A;&#x8282;&#x70B9;&#x8981;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;</li>
+<li>&#x5355;&#x5411;&#x7BAD;&#x5934;&#x4E3A;&#x6D41;&#x7A0B;&#x8FDB;&#x884C;&#x65B9;&#x5411;&#x3002;&#x652F;&#x6301;&#x865A;&#x7EBF;&#x4E0E;&#x5B9E;&#x7EBF;&#xFF0C;&#x6709;&#x7BAD;&#x5934;&#x4E0E;&#x65E0;&#x7BAD;&#x5934;&#x3001;&#x6709;&#x6587;&#x5B57;&#x4E0E;&#x65E0;&#x6587;&#x5B57;&#x3002;&#x5206;&#x522B;&#x662F;---&#x3001;-.-&#x3001; --&gt;&#x3001;-.-&gt;&#x3001;--&#x6587;&#x5B57;--&gt;&#x3001;-.&#x6587;&#x5B57;.-&gt;&#x3001;--&#x6587;&#x5B57;---&#x3001;-.&#x6587;&#x5B57;.-</li>
+<li>&#x652F;&#x6301;&#x5B50;&#x56FE;&#x3002;&#x5982;&#x4EE3;&#x7801;&#x3001;&#x6548;&#x679C;&#x56FE;&#x6240;&#x793A;&#x3002;</li>
+</ol>
+</blockquote>
+<h2 id="&#x5E8F;&#x5217;&#x56FE;">&#x5E8F;&#x5217;&#x56FE;</h2>
+<p>&#x5E8F;&#x5217;&#x56FE;&#x5171;&#x6709;5&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x5206;&#x522B;&#x662F;&#xFF1A;<strong>&#x53C2;&#x4E0E;&#x8005;&#x3001;&#x6D88;&#x606F;&#x7EBF;&#x3001;&#x5FAA;&#x73AF;&#x3001;&#x9009;&#x62E9;&#x3001;&#x53EF;&#x9009;&#x3001;&#x5E76;&#x884C;&#x3001;&#x6CE8;&#x89E3;</strong>&#x3002;&#x6211;&#x4EEC;&#x6765;&#x6A21;&#x62DF;&#x4E00;&#x4E2A;&#x7EFC;&#x5408;&#x573A;&#x666F;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;:</p>
+<h4 id="&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;">&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</h4>
+<pre><code class="lang-mermaid">sequenceDiagram
+Title: &#x5C0F;&#x660E;&#x4E70;&#x4E66;
+
+participant consumer as &#x5C0F;&#x660E;
+participant store as &#x4E66;&#x5E97;
+participant publisher as &#x51FA;&#x7248;&#x793E;
+
+consumer -&gt;&gt; store: &#x60F3;&#x4E70;&#x4E00;&#x672C;&#x9650;&#x91CF;&#x7248;&#x4E66;&#x7C4D;
+store --&gt;&gt; consumer: &#x7F3A;&#x8D27;
+consumer -&gt;&gt; store: &#x9694;&#x4E00;&#x4E2A;&#x6708;&#x518D;&#x6B21;&#x8BE2;&#x95EE;
+store --&gt;&gt; consumer: &#x62A2;&#x5B8C;&#x4E86;
+loop &#x4E00;&#x4E2A;&#x661F;&#x671F;&#x4E00;&#x6B21;
+consumer -x +store: &#x6709;&#x8D27;&#x4E86;&#x5417;
+store --x -consumer: &#x6B63;&#x5728;&#x8BA2;,&#x6709;&#x8D27;&#x9A6C;&#x4E0A;&#x901A;&#x77E5;&#x4F60;
+end
+
+store -&gt;&gt; publisher: &#x6211;&#x8981;&#x8BA2;&#x8D2D;&#x4E00;&#x6279;&#x8D27;
+publisher --x store: &#x8FD4;&#x56DE;&#x6240;&#x6709;&#x4E66;&#x7C4D;&#x7684;&#x7C7B;&#x522B;&#x4FE1;&#x606F;
+
+alt &#x4E66;&#x7C4D;&#x7C7B;&#x522B;&#x7B26;&#x5408;&#x8981;&#x6C42;
+store -&gt;&gt; publisher: &#x8BF7;&#x6C42;&#x4E66;&#x5355;&#x4FE1;&#x606F;
+publisher --x store: &#x8FD4;&#x56DE;&#x8BE5;&#x7C7B;&#x522B;&#x4E66;&#x5355;&#x4FE1;&#x606F;
+else &#x4E66;&#x5355;&#x91CC;&#x7684;&#x4E66;&#x6709;&#x5E02;&#x573A;&#x9700;&#x6C42;
+store -&gt;&gt; publisher: &#x8D2D;&#x4E70;&#x6307;&#x5B9A;&#x6570;&#x636E;
+publisher --x store: &#x786E;&#x8BA4;&#x8BA2;&#x5355;
+else &#x4E66;&#x7C4D;&#x4E0D;&#x7B26;&#x5408;&#x8981;&#x6C42;
+store --&gt;&gt; publisher: &#x6682;&#x65F6;&#x4E0D;&#x8D2D;&#x4E70;
+end
+
+par &#x5E76;&#x884C;&#x6267;&#x884C;
+publisher -&gt;&gt; publisher : &#x751F;&#x4EA7;
+publisher -&gt;&gt; publisher : &#x9500;&#x552E;
+end
+
+opt &#x4E66;&#x7C4D;&#x8D2D;&#x4E70;&#x91CF;&gt;=500 &amp;&amp; &#x5E93;&#x5B58;&gt;=50
+publisher -&gt;&gt; store : &#x51FA;&#x8D27;
+store --x publisher : &#x786E;&#x8BA4;&#x6536;&#x8D27;
+end
+
+Note left of consumer : &#x56FE;&#x4E66;&#x6536;&#x85CF;&#x5BB6;
+Note over consumer,store : &#x53BB;&#x4E66;&#x5E97;&#x8D2D;&#x4E70;&#x4E66;&#x7C4D;
+Note left of store : &#x5168;&#x56FD;&#x77E5;&#x540D;&#x4E66;&#x5E97;
+Note over store,publisher : &#x53BB;&#x51FA;&#x7248;&#x793E;&#x8FDB;&#x8D27;
+Note left of publisher : &#x6301;&#x6709;&#x7248;&#x6743;&#x7684;&#x51FA;&#x7248;&#x793E;
+</code></pre>
+<h4 id="&#x4EE3;&#x7801;&#x8BF4;&#x660E;">&#x4EE3;&#x7801;&#x8BF4;&#x660E;:</h4>
+<ol>
+<li>&#x6D88;&#x606F;&#x7EBF;</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-&gt;</td>
+<td>&#x65E0;&#x7BAD;&#x5934;&#x7684;&#x5B9E;&#x7EBF;</td>
+</tr>
+<tr>
+<td>--&gt;</td>
+<td>&#x65E0;&#x7BAD;&#x5934;&#x7684;&#x865A;&#x7EBF;</td>
+</tr>
+<tr>
+<td>-&gt;&gt;</td>
+<td>&#x6709;&#x7BAD;&#x5934;&#x7684;&#x5B9E;&#x7EBF;(&#x4E3B;&#x52A8;&#x53D1;&#x51FA;&#x6D88;&#x606F;)</td>
+</tr>
+<tr>
+<td>--&gt;&gt;</td>
+<td>&#x6709;&#x7BAD;&#x5934;&#x7684;&#x865A;&#x7EBF;(&#x54CD;&#x5E94;)</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>&#x672B;&#x7AEF;&#x4E3A;X&#x7684;&#x5B9E;&#x7EBF;(&#x4E3B;&#x52A8;&#x53D1;&#x51FA;&#x5F02;&#x6B65;&#x6D88;&#x606F;)</td>
+</tr>
+<tr>
+<td>--x</td>
+<td>&#x6709;&#x7BAD;&#x5934;&#x7684;&#x5B9E;&#x7EBF;(&#x4EE5;&#x5F02;&#x6B65;&#x5F62;&#x5F0F;&#x54CD;&#x5E94;&#x6D88;&#x606F;)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>alt &#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x53EF;&#x66FF;&#x4EE3;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x53EF;&#x80FD;&#x7684;&#x60C5;&#x51B5;</p>
+<p>opt&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;if&#x8BED;&#x53E5;&#xFF0C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x4E0B;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;</p>
+</blockquote>
+<h2 id="&#x997C;&#x56FE;">&#x997C;&#x56FE;</h2>
+<h4 id="&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;">&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</h4>
+<pre><code class="lang-mermaid">pie
+ title Pie Chart
+ &quot;Dogs&quot; : 386
+ &quot;cats&quot; : 567
+ &quot;rabbit&quot; : 700
+ &quot;pig&quot;:365
+ &quot;tiger&quot; : 15
+</code></pre>
+<h2 id="&#x7518;&#x7279;&#x56FE;">&#x7518;&#x7279;&#x56FE;</h2>
+<p>&#x8FD9;&#x662F;&#x6211;&#x7528;Process&#x505A;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4EE5;&#x5F20;&#x56FE;&#x4E3A;&#x4F8B;&#xFF0C;&#x7528;MarkDown&#x753B;&#x4E00;&#x5F20;&#x7518;&#x7279;&#x56FE;&#x5427;&#x3002;</p>
+<p>&#x987A;&#x4FBF;&#x5BF9;&#x6BD4;&#x4E00;&#x4E0B;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x770B;&#x770B;&#x54EA;&#x4E2A;&#x5C55;&#x793A;&#x6548;&#x679C;&#x597D;&#x4E00;&#x70B9;</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14489497-23057120f4ee5bfa.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
+<p>&#x6548;&#x679C;&#x56FE;</p>
+<h4 id="&#x4EE3;&#x7801;&#x8BF4;&#x660E;&#xFF1A;">&#x4EE3;&#x7801;&#x8BF4;&#x660E;&#xFF1A;</h4>
+<pre><code class="lang-mermaid">gantt
+ dateFormat  YYYY-MM-DD    //&#x5E95;&#x90E8;&#x7684;&#x65F6;&#x95F4;&#x683C;&#x5F0F;
+ title     Adding GANTT diagram functionality to mermaid   //&#x7518;&#x7279;&#x56FE;&#x540D;&#x79F0;
+ excludes   weekends               //&#x5468;&#x672B;&#x6709;&#x4F11;&#x606F;
+
+ section A         //&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x6A21;&#x5757;
+ task1        :done,des1, 2014-01-06,2014-01-08   //&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x6A21;&#x5757;&#x7684;&#x5404;&#x9879;&#x8FDB;&#x5EA6;&#x5B89;&#x6392;
+ task2        :active,des2, 2014-01-09, 3d      //&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x5408;&#x6CD5;&#x7684;
+ task3        :des3, after des2, 5d          //&#x6211;&#x4EEC;&#x7B49;&#x4E00;&#x4E0B;&#x6BCF;&#x4E2A;&#x90FD;&#x8BD5;&#x4E00;&#x4E0B;
+ task4        :crit, done, 2014-01-06,24h
+ task5        :crit, done, after des1, 2d
+ task6        :crit, active, 3d
+ task7        :crit, 5d
+ task8        :2d
+ task9        :1d
+ ...         :[&#x53C2;&#x6570;1:crit,&#x53EF;&#x4E0D;&#x586B;],[&#x53C2;&#x6570;2:active,done,&#x53EF;&#x4E0D;&#x586B;&#x8868;&#x793A;&#x5F85;&#x5B8C;&#x6210;],[&#x53C2;&#x6570;3:&#x5C0F;&#x540D;],
+ [&#x53C2;&#x6570;4:&#x5F00;&#x59CB;&#x65F6;&#x95F4;],[&#x53C2;&#x6570;5:&#x7ED3;&#x675F;&#x65F6;&#x95F4;]
+ section B
+ section C 
+ ...
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x65F6;&#x95F4;&#x7684;&#x8868;&#x793A;&#x6709;&#x591A;&#x79CD;&#xFF0C;&#x5982;&#x4E0A;&#xFF0C;</p>
+<p>&#x53EF;&#x4EE5;&#x662F;</p>
+<ul>
+<li>2014-01-06,2014-01-08</li>
+<li>2014-01-09, 3d</li>
+<li>after des2, 5d</li>
+<li>5d</li>
+<li>&#x72B6;&#x6001;&#x9ED8;&#x8BA4;&#x662F;&#x5F85;&#x5B8C;&#x6210;&#xFF0C;&#x5EFA;&#x8BAE;&#x7ED9;&#x6BCF;&#x4E2A;&#x4EFB;&#x52A1;desc</li>
+</ul>
+<h4 id="&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;">&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</h4>
+<pre><code class="lang-mermaid">gantt
+ dateFormat  YYYY-MM-DD
+ title     &#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x4EFB;&#x52A1;&#x8FDB;&#x5EA6;&#x5B89;&#x6392; 
+ excludes   weekends
+
+ section &#x8F6F;&#x786C;&#x4EF6;&#x9009;&#x578B; 
+ &#x786C;&#x4EF6;&#x9009;&#x62E9;      :done,desc1, 2020-01-01,6w 
+ &#x8F6F;&#x4EF6;&#x8BBE;&#x8BA1;      :active,desc2, after desc1,3w
+
+ section &#x7F16;&#x7801;&#x51C6;&#x5907;
+ &#x8F6F;&#x4EF6;&#x9009;&#x62E9;       :crit,done,desc3,2020-01-01,2020-01-29
+ &#x7F16;&#x7801;&#x548C;&#x6D4B;&#x8BD5;&#x8F6F;&#x4EF6;   :1w
+ &#x5B89;&#x88C5;&#x6D4B;&#x8BD5;&#x7CFB;&#x7EDF;    :2020-02-12,1w
+
+ section &#x5B8C;&#x6210;&#x8BBA;&#x6587;
+ &#x7F16;&#x5199;&#x624B;&#x518C;      :desc5,2020-01-01,10w
+ &#x8BBA;&#x6587;&#x4FEE;&#x6539;      :crit,after desc3,3w
+ &#x8BBA;&#x6587;&#x5B9A;&#x7A3F;      :after desc5,3w
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: mac">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tool_usage.html" class="navigation navigation-next " aria-label="Next page: mac工具使用手册">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MarkDown画图(实例讲解) —— 流程图、序列图、饼图、甘特图","level":"1.6.1","depth":2,"next":{"title":"mac工具使用手册","level":"1.6.2","depth":2,"path":"mac/tool_usage.md","ref":"mac/tool_usage.md","articles":[]},"previous":{"title":"mac","level":"1.6","depth":1,"path":"mac/README.md","ref":"mac/README.md","articles":[{"title":"MarkDown画图(实例讲解) —— 流程图、序列图、饼图、甘特图","level":"1.6.1","depth":2,"path":"mac/markdown内进行绘图.md","ref":"mac/markdown内进行绘图.md","articles":[]},{"title":"mac工具使用手册","level":"1.6.2","depth":2,"path":"mac/tool_usage.md","ref":"mac/tool_usage.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mac/markdown内进行绘图.md","mtime":"2022-10-10T15:04:12.461Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-11T06:10:39.584Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
