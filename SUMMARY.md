@@ -28,4 +28,4 @@
 	* [命令行执行卡住分析](linux/strace.md)
 	* [配置admin用户sudo免密登录](linux/sudo.md)
 * [mac](mac/README.md)
-	* [mac工具使用手册](mac/tool_usage.md)
+	* [mac工具使用手册](mac/mac工具使用手册.md)
