@@ -27,6 +27,5 @@ select table_name,table_type,table_id,index_type,part_level from gv$table where 
 -- 7   -- 不带分区的全局索引
 -- 8   -- 不带分区的全局唯一索引
 -- 3   -- 带分区的全局索引
--- 4   -- 带分区的全局唯一索引
+-- 4   -- 带分区的全局唯一索
 ```
-

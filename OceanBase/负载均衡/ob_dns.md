@@ -1,6 +1,6 @@
 # OB_DNS负载均衡使用
 
-```
+```
 负载均衡配置
 域名配置
 #进入obdns的docker
@@ -36,4 +36,3 @@ nameserver 10.165.12.125
 验证登录
 mysql -uroot@kf_mysql_tent#kaifa_cluster -hdev.oceanbase.com -P2883 -p
 ```
-

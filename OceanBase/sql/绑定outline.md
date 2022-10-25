@@ -31,7 +31,6 @@ create outline 【outline_name】 on '【sql_id】' using hint /*+ index(【tabl
 ```
 
 3. 验证outline是否创建成功，以及语句的执行是否走对了执行计划：
-
 - 查看outline是否创建成功：
 
 ```
